@@ -7,7 +7,7 @@ import {
     updateProfile,
     getProfile,
     changePassword
-} from '../controllers/authController'
+} from '../controllers/authController.js'
 
 import protect from '../middlewares/authMiddleware.js'
 
@@ -50,6 +50,6 @@ router.post('/login',loginValidation,login)
 //protected routes
 router.get('/profile',protect,getProfile)
 router.put('/profile',protect,updateProfile)
-router.put('/change-password',protect,changePassword)
+router.post('/change-password',protect,changePassword)
 
 export default router

@@ -36,7 +36,7 @@ app.use('/uploads',express.static(path.join(__dirname,'uploads')))
 
 //routes 
 app.use(errorHandler)
-app.use('/api.auth',authRoute)
+app.use('/api/auth',authRoute)
 
 //404 handler
 app.use((req,res)=>{
